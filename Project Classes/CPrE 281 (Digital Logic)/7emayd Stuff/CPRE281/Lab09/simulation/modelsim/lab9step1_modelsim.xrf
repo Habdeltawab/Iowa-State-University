@@ -1,9 +1,0 @@
-vendor_name = ModelSim
-source_file = 1, /home/halkaabi/CPRE281/Lab09/lab9step1.bdf
-source_file = 1, /home/halkaabi/CPRE281/Lab09/output_files/lab9step2.bdf
-source_file = 1, /home/halkaabi/CPRE281/Lab09/db/lab9step1.cbx.xml
-design_name = lab9step1
-instance = comp, \R~I\, R, lab9step1, 1
-instance = comp, \S~I\, S, lab9step1, 1
-instance = comp, \Q~I\, Q, lab9step1, 1
-instance = comp, \~Q~I\, ~Q, lab9step1, 1
