@@ -1,0 +1,10 @@
+MERGESORT(A)
+    n = A.length
+    if n = 1 
+	return
+    m = n/2
+    Aleft = (A[0], . . . , A[m-1])
+    Aright = (A[m], . . . , A[n-1])
+    MERGESORT(Aleft)
+    MERGESORT(Aright)
+    A = MERGE(Aleft, Aright)

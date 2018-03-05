@@ -1,0 +1,18 @@
+MERGE(B,C)
+    p = B.length
+    q = C.length
+    create an empty array D of length p+q
+    i=0 
+    j=0
+    while i < p && j < q
+ 	if B[i] <= C[j]
+	    append B[i] to D
+            i++
+	else
+	    append C[j] to D
+	    j++
+    if i >= p
+	append C[j],...,C[q-1] to D
+    else
+	append B[i],...,B[p-1] to D
+    return D
