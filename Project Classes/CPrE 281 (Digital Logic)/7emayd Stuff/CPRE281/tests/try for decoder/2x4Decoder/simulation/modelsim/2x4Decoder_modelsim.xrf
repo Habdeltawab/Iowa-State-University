@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, /home/halkaabi/CPRE281/tests/try for decoder/2x4Decoder/2x4Decoder.bdf
+source_file = 1, /home/halkaabi/CPRE281/tests/try for decoder/2x4Decoder/db/2x4Decoder.cbx.xml
+design_name = \2x4Decoder\
+instance = comp, \w1~I\, w1, \2x4Decoder\, 1
+instance = comp, \w0~I\, w0, \2x4Decoder\, 1
+instance = comp, \Enable~I\, Enable, \2x4Decoder\, 1
+instance = comp, \y0~I\, y0, \2x4Decoder\, 1
+instance = comp, \y1~I\, y1, \2x4Decoder\, 1
+instance = comp, \y2~I\, y2, \2x4Decoder\, 1
+instance = comp, \y3~I\, y3, \2x4Decoder\, 1

@@ -1,0 +1,89 @@
+|Registers_2_3
+ThirdA <= seven_seg_decoder:inst2.A
+Input__5 => 4BitRegister:REGISTER5.FisrtValue
+Input__5 => AND.IN0
+Input__6 => 4BitRegister:REGISTER5.SecondValue
+Input__6 => inst20.IN0
+Input__7 => 4BitRegister:REGISTER5.ThirdValue
+Input__7 => inst21.IN0
+Input__8 => 4BitRegister:REGISTER5.FourthValue
+Input__8 => inst22.IN0
+CLK_3 => 4BitRegister:REGISTER5.Clk
+ThirdB <= seven_seg_decoder:inst2.B
+ThirdC <= seven_seg_decoder:inst2.C
+ThirdD <= seven_seg_decoder:inst2.D
+ThirdE <= seven_seg_decoder:inst2.E
+ThirdF <= seven_seg_decoder:inst2.F
+ThirdG <= seven_seg_decoder:inst2.G
+FourthA <= seven_seg_decoder:inst6.A
+Switch_I => AND.IN1
+Switch_I => inst20.IN1
+Switch_I => inst21.IN1
+Switch_I => inst22.IN1
+CLK_4 => 4BitRegister:inst1.Clk
+FourthB <= seven_seg_decoder:inst6.B
+FourthC <= seven_seg_decoder:inst6.C
+FourthD <= seven_seg_decoder:inst6.D
+FourthE <= seven_seg_decoder:inst6.E
+FourthF <= seven_seg_decoder:inst6.F
+FourthG <= seven_seg_decoder:inst6.G
+
+
+|Registers_2_3|seven_seg_decoder:inst2
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+
+
+|Registers_2_3|4BitRegister:REGISTER5
+FirstOutput <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Clk => inst.CLK
+Clk => inst2.CLK
+Clk => inst3.CLK
+Clk => inst1.CLK
+FisrtValue => inst.DATAIN
+ThirdOutput <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ThirdValue => inst2.DATAIN
+FourthPutput <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+FourthValue => inst3.DATAIN
+SecondOutput <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+SecondValue => inst1.DATAIN
+
+
+|Registers_2_3|seven_seg_decoder:inst6
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+
+
+|Registers_2_3|4BitRegister:inst1
+FirstOutput <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Clk => inst.CLK
+Clk => inst2.CLK
+Clk => inst3.CLK
+Clk => inst1.CLK
+FisrtValue => inst.DATAIN
+ThirdOutput <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ThirdValue => inst2.DATAIN
+FourthPutput <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+FourthValue => inst3.DATAIN
+SecondOutput <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+SecondValue => inst1.DATAIN
+
+

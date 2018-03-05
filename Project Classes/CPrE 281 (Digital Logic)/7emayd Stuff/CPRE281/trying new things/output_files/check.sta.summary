@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'State_Machine:inst4|inst'
+Slack : -0.751
+TNS   : -9.752
+
+Type  : Slow Model Setup 'w1'
+Slack : -0.050
+TNS   : -0.050
+
+Type  : Slow Model Hold 'w1'
+Slack : -2.565
+TNS   : -4.679
+
+Type  : Slow Model Hold 'State_Machine:inst4|inst'
+Slack : -2.205
+TNS   : -32.648
+
+Type  : Slow Model Minimum Pulse Width 'w1'
+Slack : -1.222
+TNS   : -4.222
+
+Type  : Slow Model Minimum Pulse Width 'State_Machine:inst4|inst'
+Slack : -0.500
+TNS   : -16.000
+
+Type  : Fast Model Setup 'State_Machine:inst4|inst'
+Slack : -0.030
+TNS   : -0.120
+
+Type  : Fast Model Setup 'w1'
+Slack : 0.394
+TNS   : 0.000
+
+Type  : Fast Model Hold 'w1'
+Slack : -1.371
+TNS   : -2.588
+
+Type  : Fast Model Hold 'State_Machine:inst4|inst'
+Slack : -1.323
+TNS   : -20.044
+
+Type  : Fast Model Minimum Pulse Width 'w1'
+Slack : -1.222
+TNS   : -4.222
+
+Type  : Fast Model Minimum Pulse Width 'State_Machine:inst4|inst'
+Slack : -0.500
+TNS   : -16.000
+
+------------------------------------------------------------

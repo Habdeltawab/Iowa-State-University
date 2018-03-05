@@ -1,0 +1,15 @@
+|onebit
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|onebit|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+

@@ -1,0 +1,98 @@
+|PWA
+S0 <= 4BitAdder:inst.S0
+X0 => inst3.IN0
+Enable => inst3.IN1
+Enable => inst4.IN1
+Enable => inst5.IN1
+Enable => inst6.IN1
+Enable => inst7.IN1
+Enable => inst8.IN1
+Enable => inst9.IN1
+Enable => inst10.IN1
+Y0 => inst4.IN0
+X1 => inst5.IN0
+Y1 => inst6.IN0
+X2 => inst7.IN0
+Y2 => inst8.IN0
+X3 => inst9.IN0
+Y3 => inst10.IN0
+Ci => 4BitAdder:inst.Ci
+S1 <= 4BitAdder:inst.S1
+S2 <= 4BitAdder:inst.S2
+S3 <= 4BitAdder:inst.S3
+S4 <= 4BitAdder:inst.Co
+
+
+|PWA|4BitAdder:inst
+S0 <= FA:inst.SUM
+X0 => FA:inst.FirstValue
+Y0 => FA:inst.SecondValue
+Ci => FA:inst.Ci
+S1 <= FA:inst1.SUM
+X1 => FA:inst1.FirstValue
+Y1 => FA:inst1.SecondValue
+S2 <= FA:inst2.SUM
+X2 => FA:inst2.FirstValue
+Y2 => FA:inst2.SecondValue
+S3 <= FA:inst3.SUM
+X3 => FA:inst3.FirstValue
+Y3 => FA:inst3.SecondValue
+Co <= FA:inst3.Co
+
+
+|PWA|4BitAdder:inst|FA:inst
+SUM <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+FirstValue => inst.IN0
+FirstValue => inst5.IN0
+FirstValue => inst4.IN0
+SecondValue => inst.IN1
+SecondValue => inst5.IN1
+SecondValue => inst6.IN0
+Ci => inst2.IN1
+Ci => inst6.IN1
+Ci => inst4.IN1
+Co <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PWA|4BitAdder:inst|FA:inst1
+SUM <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+FirstValue => inst.IN0
+FirstValue => inst5.IN0
+FirstValue => inst4.IN0
+SecondValue => inst.IN1
+SecondValue => inst5.IN1
+SecondValue => inst6.IN0
+Ci => inst2.IN1
+Ci => inst6.IN1
+Ci => inst4.IN1
+Co <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PWA|4BitAdder:inst|FA:inst2
+SUM <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+FirstValue => inst.IN0
+FirstValue => inst5.IN0
+FirstValue => inst4.IN0
+SecondValue => inst.IN1
+SecondValue => inst5.IN1
+SecondValue => inst6.IN0
+Ci => inst2.IN1
+Ci => inst6.IN1
+Ci => inst4.IN1
+Co <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PWA|4BitAdder:inst|FA:inst3
+SUM <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+FirstValue => inst.IN0
+FirstValue => inst5.IN0
+FirstValue => inst4.IN0
+SecondValue => inst.IN1
+SecondValue => inst5.IN1
+SecondValue => inst6.IN0
+Ci => inst2.IN1
+Ci => inst6.IN1
+Ci => inst4.IN1
+Co <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

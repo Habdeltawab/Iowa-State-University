@@ -1,0 +1,56 @@
+|RBits
+Q1 <= FirstRegister:inst2.Q1
+S0 => 4BitMux:inst5.S0
+S1 => 4BitMux:inst5.S1
+Value1 => 4BitRegister:inst.FisrtValue
+Value2 => 4BitRegister:inst.SecondValue
+Value3 => 4BitRegister:inst.ThirdValue
+Value4 => 4BitRegister:inst.FourthValue
+CLK => 4BitRegister:inst.Clk
+CLK => FirstRegister:inst2.Clock
+Q2 <= FirstRegister:inst2.Q2
+Q3 <= FirstRegister:inst2.Q3
+Q4 <= FirstRegister:inst2.Q4
+
+
+|RBits|FirstRegister:inst2
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst.CLK
+Clock => inst2.CLK
+Clock => inst1.CLK
+Clock => inst3.CLK
+Input => inst.DATAIN
+Q3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RBits|4BitMux:inst5
+pin_name1 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+S0 => inst7.IN0
+S0 => inst4.IN0
+S0 => inst2.IN0
+W0 => inst.IN1
+S1 => inst8.IN0
+S1 => inst3.IN2
+S1 => inst4.IN2
+W2 => inst3.IN1
+W3 => inst4.IN1
+W1 => inst2.IN1
+
+
+|RBits|4BitRegister:inst
+FirstOutput <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Clk => inst.CLK
+Clk => inst2.CLK
+Clk => inst3.CLK
+Clk => inst1.CLK
+FisrtValue => inst.DATAIN
+ThirdOutput <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ThirdValue => inst2.DATAIN
+FourthPutput <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+FourthValue => inst3.DATAIN
+SecondOutput <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+SecondValue => inst1.DATAIN
+
+

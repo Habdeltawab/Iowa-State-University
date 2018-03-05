@@ -1,0 +1,15 @@
+|SwitchOn
+block0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y0 => block0.DATAIN
+y0 => inst3.IN0
+y0 => inst2.IN0
+y0 => inst1.IN0
+block1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+y1 => inst3.IN1
+y1 => inst1.IN1
+y2 => inst3.IN2
+y2 => inst2.IN1
+block2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+block3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

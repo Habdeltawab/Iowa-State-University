@@ -1,0 +1,991 @@
+|RegisterFile
+F07n1 <= seven_seg_decoder:inst7.A
+clear => addsub:inst13.clear
+clksubad => clock_generator:inst16.CLK_IN
+w11 => addsub:inst13.w1
+w11 => 4bitregister:inst3.Clk
+w11 => 4bitregister:inst.Clk
+w11 => 4bitregister:inst2.Clk
+w11 => 4bitregister:inst1.Clk
+w22 => addsub:inst13.w2
+Enable => 2x4Decoder:inst14.Enable
+D[0] => 4bitregister:inst3.D[0]
+D[0] => 4bitregister:inst.D[0]
+D[0] => 4bitregister:inst2.D[0]
+D[0] => 4bitregister:inst1.D[0]
+D[1] => 4bitregister:inst3.D[1]
+D[1] => 4bitregister:inst.D[1]
+D[1] => 4bitregister:inst2.D[1]
+D[1] => 4bitregister:inst1.D[1]
+D[2] => 4bitregister:inst3.D[2]
+D[2] => 4bitregister:inst.D[2]
+D[2] => 4bitregister:inst2.D[2]
+D[2] => 4bitregister:inst1.D[2]
+D[3] => 4bitregister:inst3.D[3]
+D[3] => 4bitregister:inst.D[3]
+D[3] => 4bitregister:inst2.D[3]
+D[3] => 4bitregister:inst1.D[3]
+F07n2 <= seven_seg_decoder:inst7.B
+F07n3 <= seven_seg_decoder:inst7.C
+F07n4 <= seven_seg_decoder:inst7.D
+F07n5 <= seven_seg_decoder:inst7.E
+F07n6 <= seven_seg_decoder:inst7.F
+F07n7 <= seven_seg_decoder:inst7.G
+F37n1 <= seven_seg_decoder:inst8.A
+F17n1 <= seven_seg_decoder:inst4.A
+F37n2 <= seven_seg_decoder:inst8.B
+F37n3 <= seven_seg_decoder:inst8.C
+F37n4 <= seven_seg_decoder:inst8.D
+F37n5 <= seven_seg_decoder:inst8.E
+F37n6 <= seven_seg_decoder:inst8.F
+F37n7 <= seven_seg_decoder:inst8.G
+F27n1 <= seven_seg_decoder:inst9.A
+F27n3 <= seven_seg_decoder:inst9.C
+F27n4 <= seven_seg_decoder:inst9.D
+F27n5 <= seven_seg_decoder:inst9.E
+F27n6 <= seven_seg_decoder:inst9.F
+F27n7 <= seven_seg_decoder:inst9.G
+F17n2 <= seven_seg_decoder:inst4.B
+F17n3 <= seven_seg_decoder:inst4.C
+F17n4 <= seven_seg_decoder:inst4.D
+F17n5 <= seven_seg_decoder:inst4.E
+F17n6 <= seven_seg_decoder:inst4.F
+F17n7 <= seven_seg_decoder:inst4.G
+F27n2 <= seven_seg_decoder:inst9.B
+y00 <= addsub:inst13.y0
+y11 <= addsub:inst13.y1
+y22 <= addsub:inst13.y2
+S1[0] => 4x1BusMux:inst5.S[0]
+S1[1] => 4x1BusMux:inst5.S[1]
+S2[0] => 4x1BusMux:inst6.S[0]
+S2[1] => 4x1BusMux:inst6.S[1]
+
+
+|RegisterFile|seven_seg_decoder:inst7
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+O => Decoder0.IN4
+
+
+|RegisterFile|4bitregister:inst3
+F[0] <= onebit:inst3.F
+F[1] <= onebit:inst2.F
+F[2] <= onebit:inst1.F
+F[3] <= onebit:inst.F
+Enable => onebit:inst3.select
+Enable => onebit:inst2.select
+Enable => onebit:inst1.select
+Enable => onebit:inst.select
+D[0] => onebit:inst3.data
+D[1] => onebit:inst2.data
+D[2] => onebit:inst1.data
+D[3] => onebit:inst.data
+Clk => onebit:inst3.clk
+Clk => onebit:inst2.clk
+Clk => onebit:inst1.clk
+Clk => onebit:inst.clk
+
+
+|RegisterFile|4bitregister:inst3|onebit:inst3
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst3|onebit:inst3|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst3|onebit:inst2
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst3|onebit:inst2|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst3|onebit:inst1
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst3|onebit:inst1|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst3|onebit:inst
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst3|onebit:inst|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|2x4Decoder:inst14
+y0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+w0 => inst4.IN0
+w0 => inst6.IN0
+w0 => inst8.IN0
+w1 => inst5.IN0
+w1 => inst7.IN1
+w1 => inst8.IN1
+Enable => inst.IN2
+Enable => inst6.IN2
+Enable => inst7.IN2
+Enable => inst8.IN2
+y1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegisterFile|addsub:inst13
+y0 <= ins7t.DB_MAX_OUTPUT_PORT_TYPE
+clear => ins7t.ACLR
+clear => inst1.ACLR
+clear => inst255.ACLR
+Clk => ins7t.CLK
+Clk => inst1.CLK
+Clk => inst255.CLK
+y1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+w1 => inst3.IN0
+y2 <= inst255.DB_MAX_OUTPUT_PORT_TYPE
+w2 => inst2.IN0
+
+
+|RegisterFile|clock_generator:inst16
+CLK_OUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => clock_divider_1024:inst101.CLK_IN
+
+
+|RegisterFile|clock_generator:inst16|clock_divider_1024:inst102
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|RegisterFile|clock_generator:inst16|clock_divider_1024:inst101
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|RegisterFile|seven_seg_decoder:inst8
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+O => Decoder0.IN4
+
+
+|RegisterFile|4bitregister:inst
+F[0] <= onebit:inst3.F
+F[1] <= onebit:inst2.F
+F[2] <= onebit:inst1.F
+F[3] <= onebit:inst.F
+Enable => onebit:inst3.select
+Enable => onebit:inst2.select
+Enable => onebit:inst1.select
+Enable => onebit:inst.select
+D[0] => onebit:inst3.data
+D[1] => onebit:inst2.data
+D[2] => onebit:inst1.data
+D[3] => onebit:inst.data
+Clk => onebit:inst3.clk
+Clk => onebit:inst2.clk
+Clk => onebit:inst1.clk
+Clk => onebit:inst.clk
+
+
+|RegisterFile|4bitregister:inst|onebit:inst3
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst|onebit:inst3|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst|onebit:inst2
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst|onebit:inst2|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst|onebit:inst1
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst|onebit:inst1|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst|onebit:inst
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst|onebit:inst|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|seven_seg_decoder:inst4
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+O => Decoder0.IN4
+
+
+|RegisterFile|4bitregister:inst2
+F[0] <= onebit:inst3.F
+F[1] <= onebit:inst2.F
+F[2] <= onebit:inst1.F
+F[3] <= onebit:inst.F
+Enable => onebit:inst3.select
+Enable => onebit:inst2.select
+Enable => onebit:inst1.select
+Enable => onebit:inst.select
+D[0] => onebit:inst3.data
+D[1] => onebit:inst2.data
+D[2] => onebit:inst1.data
+D[3] => onebit:inst.data
+Clk => onebit:inst3.clk
+Clk => onebit:inst2.clk
+Clk => onebit:inst1.clk
+Clk => onebit:inst.clk
+
+
+|RegisterFile|4bitregister:inst2|onebit:inst3
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst2|onebit:inst3|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst2|onebit:inst2
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst2|onebit:inst2|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst2|onebit:inst1
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst2|onebit:inst1|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst2|onebit:inst
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst2|onebit:inst|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|seven_seg_decoder:inst9
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+O => Decoder0.IN4
+
+
+|RegisterFile|4bitregister:inst1
+F[0] <= onebit:inst3.F
+F[1] <= onebit:inst2.F
+F[2] <= onebit:inst1.F
+F[3] <= onebit:inst.F
+Enable => onebit:inst3.select
+Enable => onebit:inst2.select
+Enable => onebit:inst1.select
+Enable => onebit:inst.select
+D[0] => onebit:inst3.data
+D[1] => onebit:inst2.data
+D[2] => onebit:inst1.data
+D[3] => onebit:inst.data
+Clk => onebit:inst3.clk
+Clk => onebit:inst2.clk
+Clk => onebit:inst1.clk
+Clk => onebit:inst.clk
+
+
+|RegisterFile|4bitregister:inst1|onebit:inst3
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst1|onebit:inst3|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst1|onebit:inst2
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst1|onebit:inst2|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst1|onebit:inst1
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst1|onebit:inst1|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4bitregister:inst1|onebit:inst
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|RegisterFile|4bitregister:inst1|onebit:inst|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|full_adder:inst11
+SUM <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+X => inst5.IN0
+X => inst4.IN0
+Y => inst.IN1
+Y => inst5.IN1
+Y => inst6.IN0
+Ci => inst2.IN1
+Ci => inst6.IN1
+Ci => inst4.IN1
+Co <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegisterFile|BusAdder:inst12
+S3 <= 4bitBusAdder:inst.S3
+X[0] => 4bitBusAdder:inst.X0
+X[1] => 4bitBusAdder:inst.X1
+X[2] => 4bitBusAdder:inst.X2
+X[3] => 4bitBusAdder:inst.X3
+Y[0] => inst4.IN1
+Y[1] => 54654.IN1
+Y[2] => inst3.IN1
+Y[3] => inst5.IN1
+S2 <= 4bitBusAdder:inst.S2
+S1 <= 4bitBusAdder:inst.S1
+S0 <= 4bitBusAdder:inst.S0
+
+
+|RegisterFile|BusAdder:inst12|4bitBusAdder:inst
+S0 <= FA:inst.S
+Cin => FA:inst.Cin
+X0 => FA:inst.X
+Y0 => FA:inst.Y
+S1 <= FA:inst1.S
+X1 => FA:inst1.X
+Y1 => FA:inst1.Y
+S2 <= FA:inst2.S
+X2 => FA:inst2.X
+Y2 => FA:inst2.Y
+S3 <= FA:inst3.S
+X3 => FA:inst3.X
+Y3 => FA:inst3.Y
+Cout <= FA:inst3.Cout
+
+
+|RegisterFile|BusAdder:inst12|4bitBusAdder:inst|FA:inst
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegisterFile|BusAdder:inst12|4bitBusAdder:inst|FA:inst1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegisterFile|BusAdder:inst12|4bitBusAdder:inst|FA:inst2
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegisterFile|BusAdder:inst12|4bitBusAdder:inst|FA:inst3
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegisterFile|4x1BusMux:inst5
+F[0] <= 2x1BusMUX:inst2.F[0]
+F[1] <= 2x1BusMUX:inst2.F[1]
+F[2] <= 2x1BusMUX:inst2.F[2]
+F[3] <= 2x1BusMUX:inst2.F[3]
+S[0] => 2x1BusMUX:inst.S
+S[0] => 2x1BusMUX:inst1.S
+S[1] => 2x1BusMUX:inst2.S
+A[0] => 2x1BusMUX:inst.A[0]
+A[1] => 2x1BusMUX:inst.A[1]
+A[2] => 2x1BusMUX:inst.A[2]
+A[3] => 2x1BusMUX:inst.A[3]
+B[0] => 2x1BusMUX:inst.B[0]
+B[1] => 2x1BusMUX:inst.B[1]
+B[2] => 2x1BusMUX:inst.B[2]
+B[3] => 2x1BusMUX:inst.B[3]
+C[0] => 2x1BusMUX:inst1.A[0]
+C[1] => 2x1BusMUX:inst1.A[1]
+C[2] => 2x1BusMUX:inst1.A[2]
+C[3] => 2x1BusMUX:inst1.A[3]
+D[0] => 2x1BusMUX:inst1.B[0]
+D[1] => 2x1BusMUX:inst1.B[1]
+D[2] => 2x1BusMUX:inst1.B[2]
+D[3] => 2x1BusMUX:inst1.B[3]
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst2
+F[0] <= 2x1mux:inst5.F
+F[1] <= 2x1mux:inst.F
+F[2] <= 2x1mux:inst3.F
+F[3] <= 2x1mux:inst4.F
+A[0] => 2x1mux:inst5.A
+A[1] => 2x1mux:inst.A
+A[2] => 2x1mux:inst3.A
+A[3] => 2x1mux:inst4.A
+S => 2x1mux:inst4.Select
+S => 2x1mux:inst3.Select
+S => 2x1mux:inst.Select
+S => 2x1mux:inst5.Select
+B[0] => 2x1mux:inst5.B
+B[1] => 2x1mux:inst.B
+B[2] => 2x1mux:inst3.B
+B[3] => 2x1mux:inst4.B
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst2|2x1mux:inst4
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst2|2x1mux:inst3
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst2|2x1mux:inst
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst2|2x1mux:inst5
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst
+F[0] <= 2x1mux:inst5.F
+F[1] <= 2x1mux:inst.F
+F[2] <= 2x1mux:inst3.F
+F[3] <= 2x1mux:inst4.F
+A[0] => 2x1mux:inst5.A
+A[1] => 2x1mux:inst.A
+A[2] => 2x1mux:inst3.A
+A[3] => 2x1mux:inst4.A
+S => 2x1mux:inst4.Select
+S => 2x1mux:inst3.Select
+S => 2x1mux:inst.Select
+S => 2x1mux:inst5.Select
+B[0] => 2x1mux:inst5.B
+B[1] => 2x1mux:inst.B
+B[2] => 2x1mux:inst3.B
+B[3] => 2x1mux:inst4.B
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst|2x1mux:inst4
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst|2x1mux:inst3
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst|2x1mux:inst
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst|2x1mux:inst5
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst1
+F[0] <= 2x1mux:inst5.F
+F[1] <= 2x1mux:inst.F
+F[2] <= 2x1mux:inst3.F
+F[3] <= 2x1mux:inst4.F
+A[0] => 2x1mux:inst5.A
+A[1] => 2x1mux:inst.A
+A[2] => 2x1mux:inst3.A
+A[3] => 2x1mux:inst4.A
+S => 2x1mux:inst4.Select
+S => 2x1mux:inst3.Select
+S => 2x1mux:inst.Select
+S => 2x1mux:inst5.Select
+B[0] => 2x1mux:inst5.B
+B[1] => 2x1mux:inst.B
+B[2] => 2x1mux:inst3.B
+B[3] => 2x1mux:inst4.B
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst1|2x1mux:inst4
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst1|2x1mux:inst3
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst1|2x1mux:inst
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst5|2x1BusMUX:inst1|2x1mux:inst5
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6
+F[0] <= 2x1BusMUX:inst2.F[0]
+F[1] <= 2x1BusMUX:inst2.F[1]
+F[2] <= 2x1BusMUX:inst2.F[2]
+F[3] <= 2x1BusMUX:inst2.F[3]
+S[0] => 2x1BusMUX:inst.S
+S[0] => 2x1BusMUX:inst1.S
+S[1] => 2x1BusMUX:inst2.S
+A[0] => 2x1BusMUX:inst.A[0]
+A[1] => 2x1BusMUX:inst.A[1]
+A[2] => 2x1BusMUX:inst.A[2]
+A[3] => 2x1BusMUX:inst.A[3]
+B[0] => 2x1BusMUX:inst.B[0]
+B[1] => 2x1BusMUX:inst.B[1]
+B[2] => 2x1BusMUX:inst.B[2]
+B[3] => 2x1BusMUX:inst.B[3]
+C[0] => 2x1BusMUX:inst1.A[0]
+C[1] => 2x1BusMUX:inst1.A[1]
+C[2] => 2x1BusMUX:inst1.A[2]
+C[3] => 2x1BusMUX:inst1.A[3]
+D[0] => 2x1BusMUX:inst1.B[0]
+D[1] => 2x1BusMUX:inst1.B[1]
+D[2] => 2x1BusMUX:inst1.B[2]
+D[3] => 2x1BusMUX:inst1.B[3]
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst2
+F[0] <= 2x1mux:inst5.F
+F[1] <= 2x1mux:inst.F
+F[2] <= 2x1mux:inst3.F
+F[3] <= 2x1mux:inst4.F
+A[0] => 2x1mux:inst5.A
+A[1] => 2x1mux:inst.A
+A[2] => 2x1mux:inst3.A
+A[3] => 2x1mux:inst4.A
+S => 2x1mux:inst4.Select
+S => 2x1mux:inst3.Select
+S => 2x1mux:inst.Select
+S => 2x1mux:inst5.Select
+B[0] => 2x1mux:inst5.B
+B[1] => 2x1mux:inst.B
+B[2] => 2x1mux:inst3.B
+B[3] => 2x1mux:inst4.B
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst2|2x1mux:inst4
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst2|2x1mux:inst3
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst2|2x1mux:inst
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst2|2x1mux:inst5
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst
+F[0] <= 2x1mux:inst5.F
+F[1] <= 2x1mux:inst.F
+F[2] <= 2x1mux:inst3.F
+F[3] <= 2x1mux:inst4.F
+A[0] => 2x1mux:inst5.A
+A[1] => 2x1mux:inst.A
+A[2] => 2x1mux:inst3.A
+A[3] => 2x1mux:inst4.A
+S => 2x1mux:inst4.Select
+S => 2x1mux:inst3.Select
+S => 2x1mux:inst.Select
+S => 2x1mux:inst5.Select
+B[0] => 2x1mux:inst5.B
+B[1] => 2x1mux:inst.B
+B[2] => 2x1mux:inst3.B
+B[3] => 2x1mux:inst4.B
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst|2x1mux:inst4
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst|2x1mux:inst3
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst|2x1mux:inst
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst|2x1mux:inst5
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst1
+F[0] <= 2x1mux:inst5.F
+F[1] <= 2x1mux:inst.F
+F[2] <= 2x1mux:inst3.F
+F[3] <= 2x1mux:inst4.F
+A[0] => 2x1mux:inst5.A
+A[1] => 2x1mux:inst.A
+A[2] => 2x1mux:inst3.A
+A[3] => 2x1mux:inst4.A
+S => 2x1mux:inst4.Select
+S => 2x1mux:inst3.Select
+S => 2x1mux:inst.Select
+S => 2x1mux:inst5.Select
+B[0] => 2x1mux:inst5.B
+B[1] => 2x1mux:inst.B
+B[2] => 2x1mux:inst3.B
+B[3] => 2x1mux:inst4.B
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst1|2x1mux:inst4
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst1|2x1mux:inst3
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst1|2x1mux:inst
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|RegisterFile|4x1BusMux:inst6|2x1BusMUX:inst1|2x1mux:inst5
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+

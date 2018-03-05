@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, /home/halkaabi/CPRE281/tests/OnSwitch/SwitchOn.bdf
+source_file = 1, /home/halkaabi/CPRE281/tests/OnSwitch/db/SwitchOn.cbx.xml
+design_name = SwitchOn
+instance = comp, \y0~I\, y0, SwitchOn, 1
+instance = comp, \y2~I\, y2, SwitchOn, 1
+instance = comp, \y1~I\, y1, SwitchOn, 1
+instance = comp, \inst~0\, inst~0, SwitchOn, 1
+instance = comp, \inst3~0\, inst3~0, SwitchOn, 1
+instance = comp, \block0~I\, block0, SwitchOn, 1
+instance = comp, \block1~I\, block1, SwitchOn, 1
+instance = comp, \block2~I\, block2, SwitchOn, 1
+instance = comp, \block3~I\, block3, SwitchOn, 1

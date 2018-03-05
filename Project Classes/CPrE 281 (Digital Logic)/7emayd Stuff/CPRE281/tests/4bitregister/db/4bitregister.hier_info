@@ -1,0 +1,79 @@
+|4bitregister
+F[0] <= onebit:inst3.F
+F[1] <= onebit:inst2.F
+F[2] <= onebit:inst1.F
+F[3] <= onebit:inst.F
+Enable => onebit:inst3.select
+Enable => onebit:inst2.select
+Enable => onebit:inst1.select
+Enable => onebit:inst.select
+D[0] => onebit:inst3.data
+D[1] => onebit:inst2.data
+D[2] => onebit:inst1.data
+D[3] => onebit:inst.data
+Clk => onebit:inst3.clk
+Clk => onebit:inst2.clk
+Clk => onebit:inst1.clk
+Clk => onebit:inst.clk
+
+
+|4bitregister|onebit:inst3
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|4bitregister|onebit:inst3|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|4bitregister|onebit:inst2
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|4bitregister|onebit:inst2|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|4bitregister|onebit:inst1
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|4bitregister|onebit:inst1|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+
+|4bitregister|onebit:inst
+F <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+select => 2x1mux:inst2.Select
+data => 2x1mux:inst2.B
+
+
+|4bitregister|onebit:inst|2x1mux:inst2
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Select => inst1.IN0
+Select => inst3.IN0
+B => inst1.IN1
+A => inst.IN0
+
+

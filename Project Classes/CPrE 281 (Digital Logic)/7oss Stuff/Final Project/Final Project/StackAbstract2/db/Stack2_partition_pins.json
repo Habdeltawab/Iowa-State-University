@@ -1,0 +1,189 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "FirstA",
+					"strict" : false
+				},
+				{
+					"name" : "FirstB",
+					"strict" : false
+				},
+				{
+					"name" : "FirstC",
+					"strict" : false
+				},
+				{
+					"name" : "FirstD",
+					"strict" : false
+				},
+				{
+					"name" : "FirstE",
+					"strict" : false
+				},
+				{
+					"name" : "FirstF",
+					"strict" : false
+				},
+				{
+					"name" : "FirstG",
+					"strict" : false
+				},
+				{
+					"name" : "SecondA",
+					"strict" : false
+				},
+				{
+					"name" : "SecondB",
+					"strict" : false
+				},
+				{
+					"name" : "SecondC",
+					"strict" : false
+				},
+				{
+					"name" : "SecondD",
+					"strict" : false
+				},
+				{
+					"name" : "SecondE",
+					"strict" : false
+				},
+				{
+					"name" : "SecondF",
+					"strict" : false
+				},
+				{
+					"name" : "SecondG",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdA",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdB",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdC",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdD",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdE",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdF",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdG",
+					"strict" : false
+				},
+				{
+					"name" : "FourthA",
+					"strict" : false
+				},
+				{
+					"name" : "FourthB",
+					"strict" : false
+				},
+				{
+					"name" : "FourthC",
+					"strict" : false
+				},
+				{
+					"name" : "FourthD",
+					"strict" : false
+				},
+				{
+					"name" : "FourthF",
+					"strict" : false
+				},
+				{
+					"name" : "FourthG",
+					"strict" : false
+				},
+				{
+					"name" : "FourthE",
+					"strict" : false
+				},
+				{
+					"name" : "Cin",
+					"strict" : false
+				},
+				{
+					"name" : "Sume_Switch",
+					"strict" : false
+				},
+				{
+					"name" : "Input_3",
+					"strict" : false
+				},
+				{
+					"name" : "Input_S",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_2",
+					"strict" : false
+				},
+				{
+					"name" : "POP",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "Input_2",
+					"strict" : false
+				},
+				{
+					"name" : "Input_1",
+					"strict" : false
+				},
+				{
+					"name" : "Input_4",
+					"strict" : false
+				},
+				{
+					"name" : "Input__8",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_3",
+					"strict" : false
+				},
+				{
+					"name" : "Input__7",
+					"strict" : false
+				},
+				{
+					"name" : "Input__6",
+					"strict" : false
+				},
+				{
+					"name" : "Input__5",
+					"strict" : false
+				},
+				{
+					"name" : "Switch_I",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_4",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

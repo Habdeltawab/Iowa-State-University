@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 29 00:44:36 2015
+Quartus II 64-Bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
+Revision Name : projectN28
+Top-level Entity Name : projectN28
+Family : Cyclone II
+Total logic elements : 127
+    Total combinational functions : 115
+    Dedicated logic registers : 46
+Total registers : 46
+Total pins : 48
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

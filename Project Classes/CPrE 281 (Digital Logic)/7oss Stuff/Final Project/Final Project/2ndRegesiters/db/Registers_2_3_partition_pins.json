@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ThirdA",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdB",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdC",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdD",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdE",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdF",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdG",
+					"strict" : false
+				},
+				{
+					"name" : "FourthA",
+					"strict" : false
+				},
+				{
+					"name" : "FourthB",
+					"strict" : false
+				},
+				{
+					"name" : "FourthC",
+					"strict" : false
+				},
+				{
+					"name" : "FourthD",
+					"strict" : false
+				},
+				{
+					"name" : "FourthE",
+					"strict" : false
+				},
+				{
+					"name" : "FourthF",
+					"strict" : false
+				},
+				{
+					"name" : "FourthG",
+					"strict" : false
+				},
+				{
+					"name" : "Input__8",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_3",
+					"strict" : false
+				},
+				{
+					"name" : "Input__7",
+					"strict" : false
+				},
+				{
+					"name" : "Input__6",
+					"strict" : false
+				},
+				{
+					"name" : "Input__5",
+					"strict" : false
+				},
+				{
+					"name" : "Switch_I",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_4",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, /home/halkaabi/CPRE281/tests/4x1mux/4x1mux.bdf
+source_file = 1, /home/halkaabi/CPRE281/tests/4x1mux/db/4x1mux.cbx.xml
+source_file = 1, /home/halkaabi/CPRE281/tests/4x1mux/2x1mux.bdf
+design_name = \4x1mux\
+instance = comp, \S[1]~I\, S[1], \4x1mux\, 1
+instance = comp, \D~I\, D, \4x1mux\, 1
+instance = comp, \B~I\, B, \4x1mux\, 1
+instance = comp, \A~I\, A, \4x1mux\, 1
+instance = comp, \S[0]~I\, S[0], \4x1mux\, 1
+instance = comp, \inst|inst2~0\, inst|inst2~0, \4x1mux\, 1
+instance = comp, \C~I\, C, \4x1mux\, 1
+instance = comp, \inst|inst2~1\, inst|inst2~1, \4x1mux\, 1
+instance = comp, \F~I\, F, \4x1mux\, 1

@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "V1",
+					"strict" : false
+				},
+				{
+					"name" : "V2",
+					"strict" : false
+				},
+				{
+					"name" : "V3",
+					"strict" : false
+				},
+				{
+					"name" : "V4",
+					"strict" : false
+				},
+				{
+					"name" : "Q0",
+					"strict" : false
+				},
+				{
+					"name" : "Enable",
+					"strict" : false
+				},
+				{
+					"name" : "Q1",
+					"strict" : false
+				},
+				{
+					"name" : "Q2",
+					"strict" : false
+				},
+				{
+					"name" : "Q3",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, U:/College Courses/CPRE281/Lab7/FA.v
+source_file = 1, U:/College Courses/CPRE281/Lab7/4_Bit_Carry_Adder.bdf
+source_file = 1, U:/College Courses/CPRE281/Lab7/Final_Design.bdf
+source_file = 1, U:/College Courses/CPRE281/Lab7/db/FA.cbx.xml
+design_name = FA
+instance = comp, \Cout~output , Cout~output, FA, 1
+instance = comp, \s~output , s~output, FA, 1
+instance = comp, \Cin~input , Cin~input, FA, 1
+instance = comp, \y~input , y~input, FA, 1
+instance = comp, \x~input , x~input, FA, 1
+instance = comp, \Cout~0 , Cout~0, FA, 1
+instance = comp, \s~0 , s~0, FA, 1

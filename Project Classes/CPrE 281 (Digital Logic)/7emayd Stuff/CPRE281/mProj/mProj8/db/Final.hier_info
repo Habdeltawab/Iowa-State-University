@@ -1,0 +1,36 @@
+|Final
+pin_name5 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+pin_name1 => Bob:inst.w
+pin_name1 => C:inst2.w
+pin_name2 => Bob:inst.x
+pin_name2 => C:inst2.x
+pin_name3 => Bob:inst.y
+pin_name3 => C:inst2.y
+pin_name4 => Bob:inst.z
+pin_name4 => C:inst2.z
+
+
+|Final|Bob:inst
+w => f.IN0
+w => f.IN0
+x => f.IN0
+x => f.IN1
+y => f.IN1
+y => f.IN1
+y => f.IN1
+z => f.IN1
+z => f.IN1
+z => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final|C:inst2
+w => C.IN0
+x => C.IN0
+y => C.IN1
+y => C.IN1
+z => C.IN1
+z => C.IN1
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+

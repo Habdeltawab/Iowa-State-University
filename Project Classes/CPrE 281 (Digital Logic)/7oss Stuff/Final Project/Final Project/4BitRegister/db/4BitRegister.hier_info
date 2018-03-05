@@ -1,0 +1,15 @@
+|4BitRegister
+FirstOutput <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Clk => inst.CLK
+Clk => inst2.CLK
+Clk => inst3.CLK
+Clk => inst1.CLK
+FisrtValue => inst.DATAIN
+ThirdOutput <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ThirdValue => inst2.DATAIN
+FourthPutput <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+FourthValue => inst3.DATAIN
+SecondOutput <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+SecondValue => inst1.DATAIN
+
+

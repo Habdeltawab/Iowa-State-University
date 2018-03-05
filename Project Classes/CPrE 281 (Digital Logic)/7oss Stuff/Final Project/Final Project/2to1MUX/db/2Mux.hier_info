@@ -1,0 +1,8 @@
+|2Mux
+Output <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst3.IN0
+V2 => inst1.IN1
+V1 => inst.IN0
+
+

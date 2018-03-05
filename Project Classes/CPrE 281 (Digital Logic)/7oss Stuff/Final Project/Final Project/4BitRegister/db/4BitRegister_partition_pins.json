@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "FirstOutput",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdOutput",
+					"strict" : false
+				},
+				{
+					"name" : "FourthPutput",
+					"strict" : false
+				},
+				{
+					"name" : "SecondOutput",
+					"strict" : false
+				},
+				{
+					"name" : "FisrtValue",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "ThirdValue",
+					"strict" : false
+				},
+				{
+					"name" : "FourthValue",
+					"strict" : false
+				},
+				{
+					"name" : "SecondValue",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, U:/College Courses/CPRE281/lab09/step3b/step3b.bdf
+source_file = 1, U:/College Courses/CPRE281/lab09/step3b/output_files/Chain1.cdf
+source_file = 1, U:/College Courses/CPRE281/lab09/step3b/output_files/Chain2.cdf
+source_file = 1, U:/College Courses/CPRE281/lab09/step3b/output_files/Chain7.cdf
+source_file = 1, U:/College Courses/CPRE281/lab09/step3b/db/step3b.cbx.xml
+design_name = step3b
+instance = comp, \Q~output\, Q~output, step3b, 1
+instance = comp, \~Q~output\, ~Q~output, step3b, 1
+instance = comp, \D~input\, D~input, step3b, 1
+instance = comp, \clk~input\, clk~input, step3b, 1
+instance = comp, \inst6~1\, inst6~1, step3b, 1
+instance = comp, \inst1~1\, inst1~1, step3b, 1

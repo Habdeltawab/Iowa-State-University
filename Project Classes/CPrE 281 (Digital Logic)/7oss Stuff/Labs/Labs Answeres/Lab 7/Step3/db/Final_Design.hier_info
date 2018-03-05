@@ -1,0 +1,84 @@
+|Final_Design
+Overflow <= 4_Bit_Carry_Adder:inst.Overflow
+X3 => 4_Bit_Carry_Adder:inst.X3
+Control => inst1.IN0
+Control => inst2.IN0
+Control => inst3.IN0
+Control => inst4.IN0
+Control => 4_Bit_Carry_Adder:inst.Cin
+Y3 => inst1.IN1
+X2 => 4_Bit_Carry_Adder:inst.X2
+Y2 => inst2.IN1
+X1 => 4_Bit_Carry_Adder:inst.X1
+Y1 => inst3.IN1
+X0 => 4_Bit_Carry_Adder:inst.X0
+Y0 => inst4.IN1
+Cout <= 4_Bit_Carry_Adder:inst.Cout
+S3 <= 4_Bit_Carry_Adder:inst.S3
+S2 <= 4_Bit_Carry_Adder:inst.S2
+S1 <= 4_Bit_Carry_Adder:inst.S1
+S0 <= 4_Bit_Carry_Adder:inst.S0
+
+
+|Final_Design|4_Bit_Carry_Adder:inst
+S0 <= FA:inst4.s
+X0 => FA:inst4.x
+Y0 => FA:inst4.y
+Cin => FA:inst4.Cin
+S1 <= FA:inst3.s
+X1 => FA:inst3.x
+Y1 => FA:inst3.y
+S2 <= FA:inst2.s
+X2 => FA:inst2.x
+Y2 => FA:inst2.y
+S3 <= FA:inst.s
+X3 => FA:inst.x
+Y3 => FA:inst.y
+Cout <= FA:inst.Cout
+Overflow <= inst121.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final_Design|4_Bit_Carry_Adder:inst|FA:inst4
+x => Cout.IN0
+x => Cout.IN0
+y => Cout.IN1
+y => Cout.IN1
+Cin => Cout.IN1
+Cin => s.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final_Design|4_Bit_Carry_Adder:inst|FA:inst3
+x => Cout.IN0
+x => Cout.IN0
+y => Cout.IN1
+y => Cout.IN1
+Cin => Cout.IN1
+Cin => s.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final_Design|4_Bit_Carry_Adder:inst|FA:inst2
+x => Cout.IN0
+x => Cout.IN0
+y => Cout.IN1
+y => Cout.IN1
+Cin => Cout.IN1
+Cin => s.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final_Design|4_Bit_Carry_Adder:inst|FA:inst
+x => Cout.IN0
+x => Cout.IN0
+y => Cout.IN1
+y => Cout.IN1
+Cin => Cout.IN1
+Cin => s.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

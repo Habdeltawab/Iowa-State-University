@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, U:/College Courses/CPRE281/lab09/step2/step2.bdf
+source_file = 1, U:/College Courses/CPRE281/lab09/step2/output_files/Chain1.cdf
+source_file = 1, U:/College Courses/CPRE281/lab09/step2/db/step2.cbx.xml
+design_name = step2
+instance = comp, \Q~output\, Q~output, step2, 1
+instance = comp, \~Q~output\, ~Q~output, step2, 1
+instance = comp, \D~input\, D~input, step2, 1
+instance = comp, \clk~input\, clk~input, step2, 1
+instance = comp, \inst3~1\, inst3~1, step2, 1

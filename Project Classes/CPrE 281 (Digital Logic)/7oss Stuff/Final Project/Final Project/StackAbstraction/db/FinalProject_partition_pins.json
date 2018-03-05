@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SecondA",
+					"strict" : false
+				},
+				{
+					"name" : "SecondB",
+					"strict" : false
+				},
+				{
+					"name" : "SecondC",
+					"strict" : false
+				},
+				{
+					"name" : "SecondD",
+					"strict" : false
+				},
+				{
+					"name" : "SecondE",
+					"strict" : false
+				},
+				{
+					"name" : "SecondF",
+					"strict" : false
+				},
+				{
+					"name" : "SecondG",
+					"strict" : false
+				},
+				{
+					"name" : "FirstF",
+					"strict" : false
+				},
+				{
+					"name" : "FirstG",
+					"strict" : false
+				},
+				{
+					"name" : "FirstA",
+					"strict" : false
+				},
+				{
+					"name" : "FirstB",
+					"strict" : false
+				},
+				{
+					"name" : "FirstC",
+					"strict" : false
+				},
+				{
+					"name" : "FirstD",
+					"strict" : false
+				},
+				{
+					"name" : "FirstE",
+					"strict" : false
+				},
+				{
+					"name" : "Sum_Switch",
+					"strict" : false
+				},
+				{
+					"name" : "Cin",
+					"strict" : false
+				},
+				{
+					"name" : "Input_E",
+					"strict" : false
+				},
+				{
+					"name" : "S1V4",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_2",
+					"strict" : false
+				},
+				{
+					"name" : "S1V3",
+					"strict" : false
+				},
+				{
+					"name" : "S1V2",
+					"strict" : false
+				},
+				{
+					"name" : "S1V1",
+					"strict" : false
+				},
+				{
+					"name" : "EnablePop",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

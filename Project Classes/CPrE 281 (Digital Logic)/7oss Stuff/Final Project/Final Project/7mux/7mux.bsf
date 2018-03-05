@@ -1,0 +1,184 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 240 304)
+	(text "7mux" (rect 5 0 42 16)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 270 41 284)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Input_1" (rect 0 0 66 16)(font "Arial" (font_size 8)))
+		(text "Input_1" (rect 21 27 87 43)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Sum_1" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "Sum_1" (rect 21 43 68 59)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Input_2" (rect 0 0 66 16)(font "Arial" (font_size 8)))
+		(text "Input_2" (rect 21 59 87 75)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Sum_2" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "Sum_2" (rect 21 75 68 91)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "Input_3" (rect 0 0 66 16)(font "Arial" (font_size 8)))
+		(text "Input_3" (rect 21 91 87 107)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sum_3" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "Sum_3" (rect 21 107 68 123)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Input_4" (rect 0 0 66 16)(font "Arial" (font_size 8)))
+		(text "Input_4" (rect 21 123 87 139)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "Sum_4" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "Sum_4" (rect 21 139 68 155)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "Input_5" (rect 0 0 66 16)(font "Arial" (font_size 8)))
+		(text "Input_5" (rect 21 155 87 171)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "Sum_5" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "Sum_5" (rect 21 171 68 187)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "Input_6" (rect 0 0 66 16)(font "Arial" (font_size 8)))
+		(text "Input_6" (rect 21 187 87 203)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "Sum_6" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "Sum_6" (rect 21 203 68 219)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "Input_7" (rect 0 0 66 16)(font "Arial" (font_size 8)))
+		(text "Input_7" (rect 21 219 87 235)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "Sum_7" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "Sum_7" (rect 21 235 68 251)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 16 240))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "Sum_Switch" (rect 0 0 94 16)(font "Arial" (font_size 8)))
+		(text "Sum_Switch" (rect 21 251 115 267)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 16 256))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "output_1" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "output_1" (rect 128 27 203 43)(font "Arial" (font_size 8)))
+		(line (pt 224 32)(pt 208 32))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "output_2" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "output_2" (rect 128 43 203 59)(font "Arial" (font_size 8)))
+		(line (pt 224 48)(pt 208 48))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "output_3" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "output_3" (rect 128 59 203 75)(font "Arial" (font_size 8)))
+		(line (pt 224 64)(pt 208 64))
+	)
+	(port
+		(pt 224 80)
+		(output)
+		(text "output_4" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "output_4" (rect 128 75 203 91)(font "Arial" (font_size 8)))
+		(line (pt 224 80)(pt 208 80))
+	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "output_5" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "output_5" (rect 128 91 203 107)(font "Arial" (font_size 8)))
+		(line (pt 224 96)(pt 208 96))
+	)
+	(port
+		(pt 224 112)
+		(output)
+		(text "output_6" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "output_6" (rect 128 107 203 123)(font "Arial" (font_size 8)))
+		(line (pt 224 112)(pt 208 112))
+	)
+	(port
+		(pt 224 128)
+		(output)
+		(text "output_7" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "output_7" (rect 128 123 203 139)(font "Arial" (font_size 8)))
+		(line (pt 224 128)(pt 208 128))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 272))
+	)
+)

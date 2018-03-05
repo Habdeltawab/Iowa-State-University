@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, U:/College Courses/CPRE281/mProj/q8.bdf
+source_file = 1, U:/College Courses/CPRE281/mProj/output_files/Chain3.cdf
+source_file = 1, U:/College Courses/CPRE281/mProj/output_files/Chain4.cdf
+source_file = 1, U:/College Courses/CPRE281/mProj/mproj.v
+design_name = q8
+instance = comp, \F~output , F~output, q8, 1
+instance = comp, \W~input , W~input, q8, 1
+instance = comp, \X~input , X~input, q8, 1
+instance = comp, \Y~input , Y~input, q8, 1
+instance = comp, \Z~input , Z~input, q8, 1
+instance = comp, \inst8~0 , inst8~0, q8, 1

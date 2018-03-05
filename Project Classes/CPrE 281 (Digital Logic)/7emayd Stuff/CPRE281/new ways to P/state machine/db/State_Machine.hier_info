@@ -1,0 +1,8 @@
+|State_Machine
+z0 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+w2 => inst13.IN0
+w1 => inst9.IN0
+z1 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+z2 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+
+

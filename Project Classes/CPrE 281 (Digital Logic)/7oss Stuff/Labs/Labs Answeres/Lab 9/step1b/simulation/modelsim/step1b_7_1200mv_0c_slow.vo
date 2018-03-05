@@ -1,0 +1,156 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition"
+
+// DATE "11/03/2016 17:54:39"
+
+// 
+// Device: Altera EP4CE115F29C7 Package FBGA780
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module step1b (
+	q,
+	r,
+	s,
+	\~q );
+output 	q;
+input 	r;
+input 	s;
+output 	\~q ;
+
+// Design Ports Information
+// q	=>  Location: PIN_G19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~q	=>  Location: PIN_G21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// r	=>  Location: PIN_AB28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// s	=>  Location: PIN_AC28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("step1b_7_1200mv_0c_v_slow.sdo");
+// synopsys translate_on
+
+wire \q~output_o ;
+wire \~q~output_o ;
+wire \s~input_o ;
+wire \r~input_o ;
+wire \inst~combout ;
+wire \inst1~combout ;
+
+
+// Location: IOOBUF_X69_Y73_N16
+cycloneive_io_obuf \q~output (
+	.i(!\inst~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\q~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \q~output .bus_hold = "false";
+defparam \q~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X74_Y73_N23
+cycloneive_io_obuf \~q~output (
+	.i(\inst1~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\~q~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \~q~output .bus_hold = "false";
+defparam \~q~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y14_N1
+cycloneive_io_ibuf \s~input (
+	.i(s),
+	.ibar(gnd),
+	.o(\s~input_o ));
+// synopsys translate_off
+defparam \s~input .bus_hold = "false";
+defparam \s~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y17_N1
+cycloneive_io_ibuf \r~input (
+	.i(r),
+	.ibar(gnd),
+	.o(\r~input_o ));
+// synopsys translate_off
+defparam \r~input .bus_hold = "false";
+defparam \r~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X84_Y41_N2
+cycloneive_lcell_comb inst(
+// Equation(s):
+// \inst~combout  = (!\s~input_o  & ((\inst~combout ) # (\r~input_o )))
+
+	.dataa(gnd),
+	.datab(\inst~combout ),
+	.datac(\s~input_o ),
+	.datad(\r~input_o ),
+	.cin(gnd),
+	.combout(\inst~combout ),
+	.cout());
+// synopsys translate_off
+defparam inst.lut_mask = 16'h0F0C;
+defparam inst.sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X84_Y41_N8
+cycloneive_lcell_comb inst1(
+// Equation(s):
+// \inst1~combout  = (\inst~combout ) # (\r~input_o )
+
+	.dataa(gnd),
+	.datab(\inst~combout ),
+	.datac(gnd),
+	.datad(\r~input_o ),
+	.cin(gnd),
+	.combout(\inst1~combout ),
+	.cout());
+// synopsys translate_off
+defparam inst1.lut_mask = 16'hFFCC;
+defparam inst1.sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign q = \q~output_o ;
+
+assign \~q  = \~q~output_o ;
+
+endmodule

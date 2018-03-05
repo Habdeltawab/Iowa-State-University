@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, U:/College Courses/CPRE281/adder/FA.bdf
+source_file = 1, c:/altera/16.0/quartus/libraries/others/maxplus2/xor3.bdf
+design_name = FA
+instance = comp, \Cout~output , Cout~output, FA, 1
+instance = comp, \Sum~output , Sum~output, FA, 1
+instance = comp, \B~input , B~input, FA, 1
+instance = comp, \Cin~input , Cin~input, FA, 1
+instance = comp, \A~input , A~input, FA, 1
+instance = comp, \inst4~0 , inst4~0, FA, 1
+instance = comp, \inst|1~0 , inst|1~0, FA, 1

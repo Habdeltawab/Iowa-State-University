@@ -1,0 +1,21 @@
+|FA
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => XOR3:inst.IN1
+Cin => inst2.IN1
+Cin => inst3.IN1
+Cin => XOR3:inst.IN3
+B => inst3.IN0
+B => inst1.IN1
+B => XOR3:inst.IN2
+Sum <= XOR3:inst.OUT
+
+
+|FA|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+

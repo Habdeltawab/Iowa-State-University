@@ -1,0 +1,26 @@
+|step3
+q <= step2:inst1.Q
+D => step2:inst.D
+clk => step2:inst.clk
+clk => inst2.IN0
+~q <= step2:inst1.~Q
+
+
+|step3|step2:inst1
+Q <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D => inst2.IN0
+D => inst.IN1
+clk => inst1.IN1
+clk => inst.IN0
+~Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|step3|step2:inst
+Q <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D => inst2.IN0
+D => inst.IN1
+clk => inst1.IN1
+clk => inst.IN0
+~Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+

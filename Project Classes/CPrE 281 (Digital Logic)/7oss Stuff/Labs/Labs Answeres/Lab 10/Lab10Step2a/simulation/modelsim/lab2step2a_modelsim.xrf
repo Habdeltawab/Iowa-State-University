@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, U:/College Courses/CPRE281/Lab10/Lab10Step2a/lab2step2a.bdf
+source_file = 1, U:/College Courses/CPRE281/Lab10/Lab10Step2a/output_files/Chain3.cdf
+source_file = 1, U:/College Courses/CPRE281/Lab10/Lab10Step2a/db/lab2step2a.cbx.xml
+design_name = lab2step2a
+instance = comp, \Q1~output , Q1~output, lab2step2a, 1
+instance = comp, \Q2~output , Q2~output, lab2step2a, 1
+instance = comp, \Q3~output , Q3~output, lab2step2a, 1
+instance = comp, \Q4~output , Q4~output, lab2step2a, 1
+instance = comp, \Z~output , Z~output, lab2step2a, 1
+instance = comp, \Clk~input , Clk~input, lab2step2a, 1
+instance = comp, \Enable~input , Enable~input, lab2step2a, 1
+instance = comp, \inst~0 , inst~0, lab2step2a, 1
+instance = comp, \inst1~0 , inst1~0, lab2step2a, 1
+instance = comp, \inst2~0 , inst2~0, lab2step2a, 1
+instance = comp, \inst3~0 , inst3~0, lab2step2a, 1

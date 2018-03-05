@@ -1,0 +1,103 @@
+|lab5step1
+pin_name13 <= seven_seg_decoder:Hex7.A
+pin_name1 => seven_seg_decoder:Hex7.Z
+pin_name2 => seven_seg_decoder:Hex7.Y
+pin_name3 => seven_seg_decoder:Hex7.X
+pin_name4 => seven_seg_decoder:Hex7.W
+pin_name14 <= seven_seg_decoder:Hex7.B
+pin_name15 <= seven_seg_decoder:Hex7.C
+pin_name16 <= seven_seg_decoder:Hex7.D
+pin_name17 <= seven_seg_decoder:Hex7.E
+pin_name18 <= seven_seg_decoder:Hex7.F
+pin_name19 <= seven_seg_decoder:Hex7.G
+pin_name20 <= seven_seg_decoder:hex6.A
+pin_name5 => seven_seg_decoder:hex6.Z
+pin_name6 => seven_seg_decoder:hex6.Y
+pin_name7 => seven_seg_decoder:hex6.X
+pin_name8 => seven_seg_decoder:hex6.W
+pin_name21 <= seven_seg_decoder:hex6.B
+pin_name22 <= seven_seg_decoder:hex6.C
+pin_name23 <= seven_seg_decoder:hex6.D
+pin_name24 <= seven_seg_decoder:hex6.E
+pin_name25 <= seven_seg_decoder:hex6.F
+pin_name26 <= seven_seg_decoder:hex6.G
+pin_name28 <= seven_seg_decoder:hex4.A
+pin_name9 => seven_seg_decoder:hex4.Z
+pin_name10 => seven_seg_decoder:hex4.Y
+pin_name11 => seven_seg_decoder:hex4.X
+pin_name12 => seven_seg_decoder:hex4.W
+pin_name29 <= seven_seg_decoder:hex4.B
+pin_name30 <= seven_seg_decoder:hex4.C
+pin_name31 <= seven_seg_decoder:hex4.D
+pin_name32 <= seven_seg_decoder:hex4.E
+pin_name33 <= seven_seg_decoder:hex4.F
+pin_name34 <= seven_seg_decoder:hex4.G
+pin_name35 <= seven_seg_decoder:hex3.A
+pin_name27 => seven_seg_decoder:hex3.Z
+pin_name42 => seven_seg_decoder:hex3.Y
+pin_name43 => seven_seg_decoder:hex3.X
+pin_name44 => seven_seg_decoder:hex3.W
+pin_name36 <= seven_seg_decoder:hex3.B
+pin_name37 <= seven_seg_decoder:hex3.C
+pin_name38 <= seven_seg_decoder:hex3.D
+pin_name39 <= seven_seg_decoder:hex3.E
+pin_name40 <= seven_seg_decoder:hex3.F
+pin_name41 <= seven_seg_decoder:hex3.G
+
+
+|lab5step1|seven_seg_decoder:Hex7
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+
+
+|lab5step1|seven_seg_decoder:hex6
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+
+
+|lab5step1|seven_seg_decoder:hex4
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+
+
+|lab5step1|seven_seg_decoder:hex3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+
+
